@@ -1,0 +1,169 @@
+/* For font use */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela&display=swap');
+
+body {
+    background-color: antiquewhite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 60px;
+    background-color: black;
+    color: white;
+
+
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+.brand img {
+    height: 60px;;
+    width: 60px;
+    padding: 0 10px;
+
+
+
+}
+
+.brand {
+    display: flex;
+    /* text-align: center; */
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+
+}
+
+/*  */
+.container {
+    min-height: 65vh;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    width: 70%;
+    margin: 23px auto;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('image/purple1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'varela', sans-serif;
+}
+
+.bottom {
+    position: sticky;
+    height: 100px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#myProgressBar {
+
+    width: 80vw;
+    cursor: pointer;
+
+}
+
+.icons {
+    margin-top: 24px;
+
+}
+
+.icons button i {
+    cursor: pointer;
+}
+
+.songItemContainer{
+    margin-top: 15px;
+}
+
+.songItem {
+    height: 45px;
+    display: flex;
+    background-color: white;
+    width: 80%;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 32px;
+    margin: 10px 0;
+
+}
+
+.songItem img {
+    height: 45px;
+    width: 45px;
+    margin: 0 10px;
+    border-radius: 45px ;
+    background-position: center;
+
+
+}
+
+.timeStamp{
+    margin: 0 0px;
+    cursor: pointer;
+}
+.timeStamp i{
+    cursor: pointer;
+}
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'varela', sans-serif;
+    /* align-items: center; */
+    display: flex;
+    flex-direction: row; 
+
+}
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.songListPlay{
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.songListPlay i{
+    cursor: pointer;
+}
+
+.songItemPlay{
+     cursor: pointer;
+}
+/* .afterPlay {
+    display: none;
+    
+}   
+.afterPlay i {
+    color: black;
+} */
