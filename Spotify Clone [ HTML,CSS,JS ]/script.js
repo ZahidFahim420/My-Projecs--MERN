@@ -64,29 +64,22 @@ songs.forEach((song, i) => {
 
 
 //playing from  the list of songs 
-let songItemPlay = Array.from(document.getElementsByClassName('songItemPlay')); 
-// let songItemPlay = Array.from(document.querySelectorAll('.songListPlay i')); 
 
-const makeAllPlays = () => {
-    songItemPlay.forEach((element) => {
-        element.classList.add('fa-circle-pause');
-    });
-};
+let songItemPlay = Array.from(document.getElementsByClassName('songItemPlay'));
 
 
-
-songItemPlay.forEach( (element) => {
-    element.addEventListener('click', (e) => {      
-        console.log(e.target);
-        makeAllPlays();        
-        e.target.classList.remove('fa-circle-play');
-        e.target.classList.add('fa-circle-pause');
-        
-    });
-
-});
-
-
+songItemPlay.forEach((element) => {
+    element.addEventListener('click', (e) => {
+        // console.log(e.target);           
+        songIndex = parseInt(e.target.id.replace("songList", "")) - 1;
+        // console.log(songIndex);
+        audioElement.src = songs[songIndex].filePath;   
+        audioElement.currentTime = 0;
+        audioElement.play();
+        masterPlay.classList.remove('fa-circle-play');
+        masterPlay.classList.add('fa-circle-pause');
+        songInfoGif.style.opacity = 1; // Show GIF
+    });});
 
 
 //play and pause song from the bottom controller
